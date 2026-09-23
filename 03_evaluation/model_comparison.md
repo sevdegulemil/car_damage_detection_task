@@ -6,27 +6,27 @@ This document summarizes the test-set performance of the YOLO models used in the
 
 The test set contains:
 
-- 2,042 images
-- 3,741 annotated instances
-- 2 classes: `dent`, `scratch`
-- Image size: 640×640
+* 2,042 images
+* 3,741 annotated instances
+* 2 classes: `dent`, `scratch`
+* Image size: 640×640
 
 The test set was not used during model training.
 
 ## Test Results
 
-| Model | Precision | Recall | mAP50 | mAP50-95 |
-|---|---:|---:|---:|---:|
-| YOLOv8n | 20.88% | 14.89% | 11.03% | 5.79% |
-| YOLO11n | 72.39% | 53.59% | 60.44% | 36.31% |
-| YOLO11s | 72.45% | 51.77% | 59.03% | 35.50% |
+| Model   | Precision | Recall |  mAP50 | mAP50-95 |
+| ------- | --------: | -----: | -----: | -------: |
+| YOLOv8n |    20.88% | 14.89% | 11.03% |    5.79% |
+| YOLO11n |    72.39% | 53.59% | 60.44% |   36.31% |
+| YOLO11s |    72.45% | 51.77% | 59.03% |   35.50% |
 
 ## Dataset Difference
 
 The YOLO11n and YOLO11s models were trained using the final cleaned dataset containing the two target classes:
 
-- `dent`
-- `scratch`
+* `dent`
+* `scratch`
 
 The YOLOv8n model was originally trained as a baseline using an earlier version of the merged dataset, before the final dataset cleaning and restructuring process.
 
@@ -36,24 +36,24 @@ Therefore, the YOLOv8n result should be interpreted as a **baseline/reference re
 
 ### YOLOv8n
 
-| Class | Precision | Recall | mAP50 | mAP50-95 |
-|---|---:|---:|---:|---:|
-| dent | 5.07% | 5.80% | 1.43% | 0.40% |
-| scratch | 36.69% | 23.97% | 20.63% | 11.18% |
+| Class   | Precision | Recall |  mAP50 | mAP50-95 |
+| ------- | --------: | -----: | -----: | -------: |
+| dent    |     5.07% |  5.80% |  1.43% |    0.40% |
+| scratch |    36.69% | 23.97% | 20.63% |   11.18% |
 
 ### YOLO11n
 
-| Class | Precision | Recall | mAP50 | mAP50-95 |
-|---|---:|---:|---:|---:|
-| dent | 75.44% | 68.08% | 74.08% | 45.34% |
-| scratch | 69.34% | 39.10% | 46.80% | 27.28% |
+| Class   | Precision | Recall |  mAP50 | mAP50-95 |
+| ------- | --------: | -----: | -----: | -------: |
+| dent    |    75.44% | 68.08% | 74.08% |   45.34% |
+| scratch |    69.34% | 39.10% | 46.80% |   27.28% |
 
 ### YOLO11s
 
-| Class | Precision | Recall | mAP50 | mAP50-95 |
-|---|---:|---:|---:|---:|
-| dent | 73.97% | 65.36% | 71.56% | 42.96% |
-| scratch | 70.93% | 38.18% | 46.50% | 28.03% |
+| Class   | Precision | Recall |  mAP50 | mAP50-95 |
+| ------- | --------: | -----: | -----: | -------: |
+| dent    |    73.97% | 65.36% | 71.56% |   42.96% |
+| scratch |    70.93% | 38.18% | 46.50% |   28.03% |
 
 ## Interpretation
 
@@ -74,3 +74,10 @@ The generated evaluation outputs are organized as follows:
 ├── README.md
 ├── model_comparison.md
 └── confusion_matrices/
+    ├── yolov8n_confusion_matrix.png
+    ├── yolov8n_confusion_matrix_normalized.png
+    ├── yolo11n_confusion_matrix.png
+    ├── yolo11n_confusion_matrix_normalized.png
+    ├── yolo11s_confusion_matrix.png
+    └── yolo11s_confusion_matrix_normalized.png
+```
