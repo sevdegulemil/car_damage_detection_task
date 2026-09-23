@@ -30,7 +30,7 @@ The model returns:
 
 The trained model weights (`best.pt`) are stored separately in the public Hugging Face model repository:
 
-`seemil/car-damage-yolo11n`
+[`seemil/car-damage-yolo11n`](https://huggingface.co/seemil/car-damage-yolo11n)
 
 The GitHub repository does not contain the model weights.
 
@@ -101,4 +101,4 @@ Streamlit Cloud
 
 ## Note
 
-This demo is intended to demonstrate the trained model's inference process. The demo output should not be interpreted as a guarantee of damage detection accuracy for real-world vehicle inspection.
+This demo is intended to demonstrate the trained model's inference process. The demo output should not be interpreted as a guarantee of damage detection accuracy for real-world car inspection.
