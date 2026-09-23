@@ -1,13 +1,28 @@
+import os
 import streamlit as st
 from ultralytics import YOLO
 from PIL import Image
+from huggingface_hub import hf_hub_download
 
-MODEL_PATH = "best.pt"
+
+MODEL_REPO = "seemil/car-damage-yolo11n"
+MODEL_FILENAME = "best.pt"
+LOCAL_MODEL_PATH = "best.pt"
 
 
 @st.cache_resource
 def load_model():
-    return YOLO(MODEL_PATH)
+
+    if os.path.exists(LOCAL_MODEL_PATH):
+        model_path = LOCAL_MODEL_PATH
+
+    else:
+        model_path = hf_hub_download(
+            repo_id=MODEL_REPO,
+            filename=MODEL_FILENAME
+        )
+
+    return YOLO(model_path)
 
 
 st.set_page_config(
