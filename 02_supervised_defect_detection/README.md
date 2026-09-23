@@ -2,20 +2,20 @@
 
 This section contains the supervised object detection experiments performed for car damage detection.
 
-The main objective was to detect two types of vehicle damage:
+The main objective was to detect two types of car damage:
 
-- `dent`
-- `scratch`
+* `dent`
+* `scratch`
 
 ## Dataset
 
 The final cleaned dataset contains:
 
-- Train: 16,331 images
-- Validation: 2,041 images
-- Test: 2,042 images
-- Total: 20,414 images
-- Classes: `dent`, `scratch`
+* Train: 16,331 images
+* Validation: 2,041 images
+* Test: 2,042 images
+* Total: 20,414 images
+* Classes: `dent`, `scratch`
 
 The dataset was prepared by combining and cleaning multiple car damage datasets.
 
@@ -65,10 +65,10 @@ Test evaluation results and model comparisons are documented separately in:
 
 This section includes:
 
-- Test metrics
-- Confusion matrices
-- Precision-recall curves
-- Model comparison
+* Test metrics
+* Confusion matrices
+* Precision-recall curves
+* Model comparison
 
 ## Experiment Structure
 
@@ -85,3 +85,4 @@ This section includes:
 │
 └── 03_yolov11s/
     └── README.md
+```
