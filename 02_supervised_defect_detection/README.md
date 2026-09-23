@@ -1,88 +1,58 @@
-# Supervised Defect Detection
+# YOLO11s
 
-This section contains the supervised object detection experiments performed for car damage detection.
+This experiment was performed using the cleaned car damage dataset.
 
-The main objective was to detect two types of car damage:
+## Model
+
+* Model: YOLO11s
+* Epochs: 50
+* Image size: 640×640
+* Batch size: Auto
+* Pretrained: Yes
+* Optimizer: Auto
+
+## Dataset
+
+The model was trained using the cleaned car damage dataset containing two classes:
 
 * `dent`
 * `scratch`
 
-## Dataset
+Dataset configuration:
 
-The final cleaned dataset contains:
+`merged-car-defect_datasets_2`
 
-* Train: 16,331 images
-* Validation: 2,041 images
-* Test: 2,042 images
-* Total: 20,414 images
-* Classes: `dent`, `scratch`
+[Roboflow Dataset](https://app.roboflow.com/sevde-gul-emil/merged-car-defect_datasets_2/1)
 
-The dataset was prepared by combining and cleaning multiple car damage datasets.
+## Purpose
 
-Detailed dataset preparation is documented in:
+This experiment was performed to evaluate YOLO11s on the cleaned dataset and compare its performance with the other YOLO experiments.
 
-`../01_dataset_preparation/`
+YOLO11s was tested as a larger model than YOLO11n to observe its performance on the same dataset.
 
-## Experiments
+## Validation Results
 
-Three YOLO experiments were performed during the project.
+The following values are from the validation results at the end of the 50-epoch training run.
 
-### YOLOv8n Baseline
+| Metric    | Result |
+| --------- | -----: |
+| Precision | 62.14% |
+| Recall    | 42.90% |
+| mAP50     | 46.39% |
+| mAP50-95  | 26.63% |
 
-The first experiment was used as the baseline.
+The training arguments, results, and evaluation plots are included in the `results` folder.
 
-It was trained using an earlier version of the merged dataset before the final dataset cleaning process.
+## Test Evaluation
 
-Details:
+After training, the best model weights were evaluated separately on the test set.
 
-`01_yolov8n_baseline/README.md`
+* Test images: 2,042
+* Image size: 640×640
+* Model weights: `best.pt`
 
-### YOLO11n
+Test evaluation results are documented separately in:
 
-YOLO11n was trained using the final cleaned dataset containing the two target classes.
+`../../03_evaluation/`
 
-Details:
-
-`02_yolov11n/README.md`
-
-### YOLO11s
-
-YOLO11s was also trained using the final cleaned dataset.
-
-Details:
-
-`03_yolov11s/README.md`
-
-## Evaluation
-
-After training, the best weights from the experiments were evaluated separately on the unseen test set.
-
-The test set contains 2,042 images.
-
-Test evaluation results and model comparisons are documented separately in:
-
-`../03_evaluation/`
-
-This section includes:
-
-* Test metrics
-* Confusion matrices
-* Precision-recall curves
-* Model comparison
-
-## Experiment Structure
-
-```text
-02_supervised_defect_detection/
-│
-├── README.md
-│
-├── 01_yolov8n_baseline/
-│   └── README.md
-│
-├── 02_yolov11n/
-│   └── README.md
-│
-└── 03_yolov11s/
-    └── README.md
-```
+The test outputs include confusion matrices, precision-recall curves, and sample predictions.
