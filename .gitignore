@@ -1,0 +1,37 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# YOLO / model outputs
+runs/
+weights/
+*.pt
+*.pth
+*.onnx
+
+# Datasets
+datasets/
+dataset/
+data/
+*.zip
+
+# Logs
+*.log
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+
+# Secrets
+.env
