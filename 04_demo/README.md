@@ -55,7 +55,7 @@ pip install -r requirements.txt
 
 ### Local Model
 
-For local development, the application can use a local `best.pt` file if it is placed inside the `05_demo` directory.
+For local development, the application can use a local `best.pt` file if it is placed inside the `04_demo` directory.
 
 If the local model file is not available, the application automatically downloads the model from Hugging Face.
 
@@ -64,7 +64,7 @@ If the local model file is not available, the application automatically download
 From the project root:
 
 ```bash
-python -m streamlit run 05_demo/app.py
+python -m streamlit run 04_demo/app.py
 ```
 
 The application will open in the browser.
@@ -88,7 +88,7 @@ The application code is hosted on GitHub, while the trained model weights are ho
 
 ```text
 GitHub
-├── 05_demo/
+├── 04_demo/
 │   └── app.py
 └── requirements.txt
 
