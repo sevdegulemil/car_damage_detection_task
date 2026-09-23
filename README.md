@@ -101,7 +101,7 @@ The trained model weights are hosted separately on Hugging Face, while the appli
 
 Demo details:
 
-`05_demo/`
+`04_demo/`
 
 ## 📁 Project Structure
 
@@ -118,7 +118,7 @@ car_damage_detection_task/
 ├── 03_evaluation/
 │   └── confusion_matrices/
 │
-├── 05_demo/
+├── 04_demo/
 │   ├── app.py
 │   └── README.md
 │
