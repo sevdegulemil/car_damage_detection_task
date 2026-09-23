@@ -9,6 +9,10 @@ The demo uses the trained YOLO11n model to detect two types of car damage:
 
 ## Demo
 
+### Live Demo
+
+[Open the Car Damage Detection Demo](https://cardamagedetectiontask-f9lgzuumacpydyk5hf3zdp.streamlit.app/)
+
 The demo provides a simple interface where a user can upload a car image and run damage detection.
 
 The model returns:
