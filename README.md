@@ -7,7 +7,7 @@ The project focuses on detecting two types of exterior car damage:
 * `dent`
 * `scratch`
 
-The main goal was to investigate supervised object detection and unsupervised anomaly detection approaches for car damage analysis, with particular attention to small and subtle damage.
+The main goal was to investigate supervised object detection approaches for car damage analysis, with particular attention to small and subtle damage.
 
 ## 🚗 Live Demo
 
@@ -23,8 +23,7 @@ The project consists of several stages:
 2. Class consolidation and dataset preparation
 3. Supervised object detection experiments
 4. Test-set evaluation
-5. Preliminary investigation of unsupervised anomaly detection
-6. Interactive model demonstration
+5. Interactive model demonstration
 
 ## 📊 Dataset Preparation
 
@@ -87,18 +86,6 @@ Detailed results:
 
 `03_evaluation/`
 
-## 🔍 Unsupervised Anomaly Detection
-
-In addition to supervised object detection, unsupervised anomaly detection methods were investigated as a potential approach for car damage analysis.
-
-PatchCore was studied and experimentally attempted using the CARS-AD dataset.
-
-This work was preliminary and was not treated as a completed benchmark because of technical limitations encountered during the experiment.
-
-Details:
-
-`04_unsupervised_anomaly_detection/`
-
 ## 🖥️ Demo
 
 The project includes an interactive Streamlit application.
@@ -131,8 +118,6 @@ car_damage_detection_task/
 ├── 03_evaluation/
 │   └── confusion_matrices/
 │
-├── 04_unsupervised_anomaly_detection/
-│
 ├── 05_demo/
 │   ├── app.py
 │   └── README.md
@@ -152,7 +137,6 @@ car_damage_detection_task/
 * PyTorch
 * OpenCV
 * Roboflow
-* Anomalib
 * Streamlit
 * Hugging Face
 
